@@ -16,7 +16,7 @@
     "cli"
   ],
   "homepage": "https://github.com/kraaas/fed-cli#readme",
-  "devDependencies": {
+  "dependencies": {
     "download-git-repo": "^0.2.1",
     "ora": "^0.4.0"
   }
