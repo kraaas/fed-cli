@@ -1,0 +1,40 @@
+#!/usr/bin/env node
+var download = require('download-git-repo')
+var ora = require('ora')
+var projectName = process.argv[3]
+var pathName = process.argv[4]
+var spinner = ora('downloading ' + projectName)
+
+if(valid()) {
+	spinner.start()
+	download('kraaas/' + projectName, pathName, function (err) {
+		spinner.stop()
+		if(err) {
+			return console.log('Failed to download project, please try again.')
+		}
+		console.log('success!')
+	})
+}
+
+function valid() {
+	if(process.argv[2] !== 'init') {
+		help()
+		return 
+	}
+	if(!projectName) {
+		console.log('<template-name> is needed.')
+		return 
+	}
+	if(!pathName) {
+		pathName = projectName
+	}
+	return true
+}
+
+function help() {
+	console.log('')
+	console.log('Tips: Use the following command to download projects.')
+	console.log('')
+	console.log('$ fed init <template-name> <your-project-name>')
+	console.log('')
+}
