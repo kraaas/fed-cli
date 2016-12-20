@@ -1,6 +1,6 @@
 {
   "name": "fed-cli",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "author": "kraaas",
   "description": "CLI for fetching project from fed-tempates.",
   "main": "",
