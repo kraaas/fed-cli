@@ -1,4 +1,21 @@
 {
+  "name": "fed-cli",
+  "version": "1.0.0",
+  "author": "kraaas",
+  "description": "CLI for fetching project from fed-tempates.",
+  "main": "",
+  "license": "ISC",
+  "bin": {
+    "fed": "./fed"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kraaas/fed-cli.git"
+  },
+  "keywords": [
+    "cli"
+  ],
+  "homepage": "https://github.com/kraaas/fed-cli#readme",
   "devDependencies": {
     "download-git-repo": "^0.2.1",
     "ora": "^0.4.0"
