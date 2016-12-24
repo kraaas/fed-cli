@@ -4,10 +4,15 @@ var ora = require('ora')
 var projectName = process.argv[3]
 var pathName = process.argv[4]
 var spinner = ora('downloading ' + projectName)
+var templates = {
+	vue: 'kraaas/vue-template',
+	react: 'kraaas/react-template',
+	angular: 'kraaas/angular-template'
+}
 
 if(valid()) {
 	spinner.start()
-	download('kraaas/' + projectName, pathName, function (err) {
+	download(templates[projectName], pathName, function (err) {
 		spinner.stop()
 		if(err) {
 			return console.log('Failed to download project, please try again.')
